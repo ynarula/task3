@@ -1,40 +1,39 @@
 body{
 	margin: 0;
+	  background-image: linear-gradient(to right, #3bffaa, #38eb9d, #34d18d, #2fbd7f);
 }
 .ago{
 	background: #000;
 	color: #fff;
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-image: linear-gradient(to right, #3bffaa, #38eb9d, #34d18d, #2fbd7f);
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
+div.topBotomBordersIn a:before, div.topBotomBordersIn a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
 }
 
-li {
-  float: left;
-}
-.active{
-	font-size: 20px;
-}
-li a {
-  display: block;
-  color: #000;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-family: 'Maven Pro';
+div.topBotomBordersIn a:before
+{
+    top: 0px;
+    transform: translateY(-10px);
 }
 
-li a:hover {
-  background-color: #111;
-  color: #fff;
-    text-decoration: none;
+div.topBotomBordersIn a:after
+{
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
 }
 .vot{
 	font-family: 'Sanchez', serif;
@@ -67,6 +66,154 @@ li a:hover {
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background:  #2fbd7f; 
+  background:  black; 
   border-radius: 10px;
+}
+div.container
+{
+    margin: 0 auto;
+	padding: 10em 3em;
+	text-align: center;
+	position: sticky;
+}
+
+div.container a
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Roboto Slab;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: sticky;
+    z-index: 0;
+    cursor: pointer;
+}
+input[type=text], input[type=password] {
+  width: 500px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  border-radius: 20px;
+ 
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  outline: none;
+  border-radius: 20px;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #000;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  border-radius: 10px;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+.container1 {
+  padding: 16px;
+}
+.sin{
+  background-color: #000;
+color: white;
+  margin: 8px 0;
+  border: none;
+    opacity: 0.9;
+    border-radius: 5px;
+  cursor: pointer;
+}
+.sin:hover{
+	opacity: 1;
+}
+.container2 {
+  padding: 16px;
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
 }
